@@ -39,17 +39,22 @@ mount('scatter-p4', renderScatterP4)
 mount('explorer', renderExplorer)
 
 // Narrativa guiada: revelar cabeceras y figuras al entrar en el viewport.
-const reveals = document.querySelectorAll<HTMLElement>('.act__head, .figure')
+// Robusto: si no hay IntersectionObserver no se ocultan; y un respaldo garantiza
+// que nada quede invisible aunque se scrollee muy rapido o se salte por un ancla.
+const reveals = [...document.querySelectorAll<HTMLElement>('.act__head, .figure')]
+const showAll = () => reveals.forEach((el) => el.classList.add('in-view'))
 if ('IntersectionObserver' in window) {
+  reveals.forEach((el) => el.classList.add('reveal'))
   const io = new IntersectionObserver(
     (entries) => {
       for (const e of entries) {
         if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target) }
       }
     },
-    { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+    { threshold: 0, rootMargin: '0px 0px -10% 0px' },
   )
-  reveals.forEach((el) => { el.classList.add('reveal'); io.observe(el) })
+  reveals.forEach((el) => io.observe(el))
+  window.setTimeout(showAll, 3000)
 }
 
 console.info('IA · Europa — narrativa + explorador montados')
