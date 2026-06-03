@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Europa, a dos velocidades · Adopción de IA en empresas europeas</title>
+    <meta
+      name="description"
+      content="Visualización interactiva de la adopción de inteligencia artificial en las empresas de la UE (Eurostat 2025) y su relación con el capital humano digital. Práctica de Visualización de datos, UOC."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <header class="nav" id="nav">
+      <a class="nav__brand" href="#top">IA · Europa</a>
+      <nav class="nav__links" aria-label="Secciones">
+        <a href="#panorama">Panorama</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#tamano">Tamaño</a>
+        <a href="#talento">Talento</a>
+        <a href="#explorar">Explorar</a>
+        <a href="#metodologia">Método</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero__inner">
+          <p class="eyebrow">Visualización de datos · UOC · 2025–2026</p>
+          <h1 class="hero__title">Europa, a dos velocidades</h1>
+          <p class="hero__lede">
+            La adopción de la inteligencia artificial divide al tejido empresarial europeo.
+            La distancia no la marca solo el dinero: la marcan el tamaño de las empresas y el
+            talento digital de cada país —con la brecha de género que lo acompaña.
+          </p>
+          <p class="hero__byline">David Madrazo Martínez · Máster en Ciencia de Datos</p>
+          <p class="hero__scroll" aria-hidden="true">Desplázate ↓</p>
+        </div>
+      </section>
+
+      <!-- ACTO 1 · PANORAMA (P1) -->
+      <section class="act" id="panorama">
+        <div class="act__head">
+          <p class="act__kicker">01 · Panorama</p>
+          <h2>¿Quién lidera y dónde queda España?</h2>
+          <p class="act__intro">
+            En 2025, la adopción de IA en las empresas europeas va de un extremo a otro:
+            de <strong>Dinamarca (42%)</strong> a <strong>Rumanía (5%)</strong>.
+            <span class="is-es">España (20%)</span> queda justo en la media. Dos Europas en un mismo mapa.
+          </p>
+        </div>
+        <div class="viz-duo">
+          <figure class="figure" aria-label="Mapa coroplético de adopción de IA en Europa">
+            <div id="map-p1" class="chart"></div>
+            <figcaption class="figure__caption">
+              Fuente: Eurostat, isoc_eb_ai · % de empresas de ≥10 empleados que usan al menos una tecnología de IA.
+              Usa los botones para cambiar de año.
+            </figcaption>
+          </figure>
+          <figure class="figure" aria-label="Ranking de países de la UE por adopción de IA">
+            <h3 class="figure__title" id="rank-title">Ranking 2025</h3>
+            <div id="rank-p1" class="chart"></div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ACTO 2 · TECNOLOGÍAS (P2) -->
+      <section class="act" id="tecnologias">
+        <div class="act__head">
+          <p class="act__kicker">02 · Tecnologías</p>
+          <h2>¿Qué IA usan las empresas y cómo irrumpió la generativa?</h2>
+          <p class="act__intro">
+            El <em>machine learning</em> y la minería de texto dominan el conjunto. Pero lo que cambia el relato es la
+            <strong>IA generativa</strong> (en ámbar): casi inexistente en 2021, se dispara tras la llegada de ChatGPT.
+            En la UE, la generación de lenguaje pasa del <strong>1% (2021) al 9% (2025)</strong>.
+          </p>
+        </div>
+        <figure class="figure" aria-label="Adopción de tipos de IA en la UE-27 por año">
+          <div id="bars-p2" class="chart"></div>
+          <figcaption class="figure__caption">
+            Fuente: Eurostat, isoc_eb_ai · UE-27, % de empresas de ≥10 empleados por tecnología y año.
+            En ámbar, las dos tecnologías de IA generativa (lenguaje e imagen/audio).
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ACTO 3 · TAMAÑO (P3) -->
+      <section class="act" id="tamano">
+        <div class="act__head">
+          <p class="act__kicker">03 · Tamaño</p>
+          <h2>La brecha que más se ensancha: grandes contra pequeñas</h2>
+          <p class="act__intro">
+            La distancia decisiva no está entre países, sino dentro de cada uno. Las <strong>grandes empresas</strong>
+            adoptan IA a un ritmo que las pequeñas no siguen: en la UE, la brecha llega a <strong>36 puntos</strong> en 2025
+            —y en España, a más de 40. La curva de las grandes se dispara; la de las pymes apenas se mueve.
+          </p>
+        </div>
+        <figure class="figure" aria-label="Adopción de IA por tamaño de empresa en la UE-27, 2021–2025">
+          <div id="lines-p3" class="chart"></div>
+          <figcaption class="figure__caption">
+            Fuente: Eurostat, isoc_eb_ai · UE-27, % de empresas que usan al menos una tecnología de IA, por tamaño y año.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ACTO 4 · TALENTO (P4) -->
+      <section class="act" id="talento">
+        <div class="act__head">
+          <p class="act__kicker">04 · Talento · El clímax</p>
+          <h2>¿Sostiene el talento la adopción? Y la brecha de género</h2>
+          <p class="act__intro">
+            Aquí se cierra la tesis. Los países con más <strong>habilidades digitales</strong> en su población son también
+            los que más IA adoptan (correlación de 0,64): la segunda velocidad. El color de cada país marca la
+            <strong>brecha de género</strong> en esas habilidades —real, aunque más sutil que las demás—.
+            <span class="is-es">España</span> aparece resaltada.
+          </p>
+        </div>
+        <figure class="figure" aria-label="Relación entre habilidades digitales de la población y adopción de IA, 2025">
+          <div id="scatter-p4" class="chart"></div>
+          <figcaption class="figure__caption">
+            Fuente: Eurostat, isoc_eb_ai e isoc_sk_dskl_i21 · cada punto es un país de la UE-27 en 2025.
+            Eje X: % de población (16–74) con habilidades digitales por encima de las básicas. Línea: tendencia lineal.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- EXPLORADOR -->
+      <section class="act" id="explorar">
+        <div class="act__head">
+          <p class="act__kicker">05 · Explora</p>
+          <h2>Baja al detalle: país, sector y tecnología</h2>
+          <p class="act__intro">
+            Hasta aquí, la historia. Ahora exploras tú: elige un <strong>país</strong>, un <strong>año</strong> y una
+            <strong>tecnología</strong> de IA, y compara su adopción por sector con la media europea.
+          </p>
+        </div>
+        <figure class="figure" aria-label="Explorador interactivo de adopción de IA por país, sector y tecnología">
+          <div id="explorer" class="chart"></div>
+          <figcaption class="figure__caption">
+            Fuente: Eurostat, isoc_eb_ain2 · % de empresas de ≥10 empleados por sección NACE (10 sectores representativos).
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- METODOLOGÍA -->
+      <section class="act" id="metodologia">
+        <div class="act__head">
+          <p class="act__kicker">Metodología</p>
+          <h2>Cómo está hecho esto</h2>
+          <p class="act__intro">
+            Transparencia completa: fuentes, las variables derivadas con sus fórmulas y las notas de calidad del dato.
+          </p>
+        </div>
+        <div class="method-grid">
+          <div class="method-card">
+            <h3>Métricas derivadas</h3>
+            <table class="method-table">
+              <thead><tr><th>Métrica</th><th>Fórmula</th></tr></thead>
+              <tbody>
+                <tr><td>Adopción de IA</td><td>% de empresas que usan al menos una tecnología (<code>E_AI_TANY</code>)</td></tr>
+                <tr><td>Brecha por tamaño</td><td><code>adopción(≥250) − adopción(10-49)</code> (pp)</td></tr>
+                <tr><td>Brecha de género</td><td><code>hab. avanzadas(H) − hab. avanzadas(M)</code> (pp)</td></tr>
+                <tr><td>Salto generativo</td><td><code>adopción(2025) − adopción(2023)</code> (pp)</td></tr>
+                <tr><td>Índice oferta–demanda</td><td><code>z(adopción) − z(habilidades)</code> sobre la UE-27</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="method-card">
+            <h3>Fuentes (Eurostat, 2025)</h3>
+            <ul>
+              <li><a href="https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ai/default/table" target="_blank" rel="noopener">isoc_eb_ai</a> — adopción de IA y tamaño de empresa</li>
+              <li><a href="https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ain2/default/table" target="_blank" rel="noopener">isoc_eb_ain2</a> — adopción de IA por sector</li>
+              <li><a href="https://ec.europa.eu/eurostat/databrowser/view/isoc_sk_dskl_i21/default/table" target="_blank" rel="noopener">isoc_sk_dskl_i21</a> — habilidades digitales por género</li>
+            </ul>
+            <p style="font-size:0.84rem;color:var(--ink-faint);margin:0.6rem 0 0;">Licencia Commission Decision 2011/833/EU (reutilización libre con atribución).</p>
+          </div>
+          <div class="method-card">
+            <h3>Notas de calidad</h3>
+            <ul>
+              <li>Valores ausentes de Eurostat (<code>:</code>) → sin dato (no se imputan).</li>
+              <li>Indicadores marcados con ruptura de serie (<code>b</code>) o baja fiabilidad (<code>u</code>) se conservan tal cual.</li>
+              <li>El Índice de Intensidad Digital (DII) se descartó: no se publica como puntuación 0–12 para los años recientes.</li>
+              <li>Eje temporal principal 2023→2025; 2021 tiene menor cobertura en IA.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <strong>Fuente:</strong> Eurostat (2025) — isoc_eb_ai, isoc_eb_ain2, isoc_sk_dskl_i21,
+        isoc_e_dii. Datos bajo licencia Commission Decision 2011/833/EU.
+      </p>
+      <p>Visualización: David Madrazo Martínez · <span id="year"></span> · Código bajo licencia MIT.</p>
+    </footer>
+  </body>
+</html>

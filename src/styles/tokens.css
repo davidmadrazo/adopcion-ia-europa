@@ -1,0 +1,50 @@
+/* Sistema de diseno — "Editorial sobrio" (hereda el azul UOC de la Parte 1).
+   Todas las paletas de datos son colorblind-safe (ver src/theme.ts). */
+:root {
+  /* — Base — */
+  --bg: #ffffff;
+  --bg-soft: #f5f7fa;
+  --bg-sunken: #eceff5;
+  --ink: #15233b;        /* texto principal (azul muy oscuro) */
+  --ink-soft: #51607a;   /* texto secundario */
+  --ink-faint: #8a96ab;  /* leyendas, ejes */
+  --line: #e3e8ef;       /* hairlines */
+  --line-strong: #c9d2df;
+
+  /* — Marca — */
+  --blue: #1a5fb4;
+  --blue-deep: #0a3d73;
+  --blue-bright: #3b82d4;
+  --accent: #e3742e;     /* coral/ambar: resalta Espana y datos clave */
+  --accent-soft: #f7e6d6;
+
+  /* — Escala secuencial (adopcion IA · mapa) — */
+  --seq-1: #eaf2fb;
+  --seq-2: #c6dcf1;
+  --seq-3: #94bfe3;
+  --seq-4: #5b97cf;
+  --seq-5: #2f6db0;
+  --seq-6: #134a85;
+
+  /* — Tipografia — */
+  --serif: Georgia, "Times New Roman", "Noto Serif", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  --fs-eyebrow: 0.80rem;
+  --fs-body: 1.0625rem;
+  --fs-lede: 1.3125rem;
+  --fs-h2: clamp(1.75rem, 4vw, 2.6rem);
+  --fs-h1: clamp(2.6rem, 7vw, 5rem);
+
+  /* — Layout — */
+  --measure: 40rem;
+  --maxw: 1180px;
+  --pad: clamp(1.25rem, 4vw, 3rem);
+  --space-section: clamp(4rem, 12vh, 9rem);
+
+  /* — Otros — */
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(21, 35, 59, 0.06), 0 8px 28px rgba(21, 35, 59, 0.08);
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
